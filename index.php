@@ -67,7 +67,15 @@
 
 						</main>
 
-					<?php get_sidebar(); ?>
+						<?php
+						if ( is_front_page() ) {
+						  //
+						} else {
+						  get_sidebar();
+						}
+						?>
+
+
 
 				</div>
 
