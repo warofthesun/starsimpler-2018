@@ -19,6 +19,23 @@ GENERAL STYLES
 
 body {}
 
+.page {
+	&--front-page {
+		.article-header, .article-footer {
+			margin:0 auto;
+		}
+
+		.entry-content {
+			p {
+				flex-basis: 66.66666667%;
+	    	max-width: 66.66666667%;
+				margin: 0 auto;
+			}
+		}
+
+	}
+}
+
 /*********************
 LAYOUT & GRID STYLES
 *********************/
@@ -41,7 +58,7 @@ NAVIGATION STYLES
 
 .nav {
 	border: 0;
-	
+
 
 	ul {
 		background:$black;

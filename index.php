@@ -1,18 +1,35 @@
 <!--index-->
 <?php get_header(); ?>
+			<?php
+			if ( is_front_page() ) {
+				echo '<div id="content" class="page--front-page">';
+			} else {
+				echo '<div id="content">';
+			}
+			?>
 
-			<div id="content">
+
 
 				<div id="inner-content" class="wrap cf row">
 
-						<main id="main" class="col-xs-12 col-sm-8 col-lg-9 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
-
+					<?php
+					if ( is_front_page() ) {
+						echo '<main id="main" class="col-xs-12 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">';
+					} else {
+						echo '<div id="<main id="main" class="col-xs-12 col-sm-8 col-lg-9 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">';
+					}
+					?>
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf single-post' ); ?> role="article">
 
-								<header class="article-header">
-
+								<?php
+								if ( is_front_page() ) {
+									echo '<header class="article-header col-sm-8">';
+								} else {
+									echo '<header class="article-header">';
+								}
+								?>
 									<h1 class="h2 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 									<p class="byline entry-meta vcard">
 	                      <?php printf( __( 'Posted', 'startertheme' ).' %1$s %2$s',
@@ -26,10 +43,16 @@
 								</header>
 
 								<section class="entry-content cf">
-									<?php the_excerpt(); ?>
+									<?php the_content(); ?>
 								</section>
 
-								<footer class="article-footer cf">
+								<?php
+								if ( is_front_page() ) {
+									echo '<footer class="article-footer col-sm-8">';
+								} else {
+									echo '<footer class="article-footer">';
+								}
+								?>
 									<p class="footer-comment-count">
 										<?php comments_number( __( '<span>No</span> Comments', 'startertheme' ), __( '<span>One</span> Comment', 'startertheme' ), __( '<span>%</span> Comments', 'startertheme' ) );?>
 									</p>

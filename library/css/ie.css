@@ -243,6 +243,15 @@ come into play. Have fun!
 /*********************
 GENERAL STYLES
 *********************/
+.page--front-page .article-header, .page--front-page .article-footer {
+  margin: 0 auto; }
+
+.page--front-page .entry-content p {
+  -ms-flex-preferred-size: 66.66666667%;
+      flex-basis: 66.66666667%;
+  max-width: 66.66666667%;
+  margin: 0 auto; }
+
 /*********************
 LAYOUT & GRID STYLES
 *********************/
