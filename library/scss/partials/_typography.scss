@@ -45,12 +45,16 @@ FONT FACE (IN YOUR FACE)
 The following is based of Typebase:
 https://github.com/devinhunt/typebase.css
 I've edited it a bit, but it's a nice starting point.
+
+
+
 */
 
-
 // font stacks
-$sans-serif:        "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$serif:             "Lora", "Georgia", Cambria, Times New Roman, Times, serif;
+$sans-serif:        "IBM Plex Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif:             "IBM Plex Mono", "Georgia", Cambria, "Times New Roman", Times, serif;
+$mono:              'Cutive Mono', Courier, monospace;
+
 
 
 /*
