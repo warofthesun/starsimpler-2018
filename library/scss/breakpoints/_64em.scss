@@ -83,7 +83,7 @@ NAVIGATION STYLES
 
 
 	ul {
-		background:$black;
+		background:$white;
 		margin-top:0;
 	}
 	li {
@@ -105,26 +105,34 @@ NAVIGATION STYLES
 		&:first-child {}
 		&:last-child {}
 
+		&.menu-item-has-children {
+			> a::after {
+				content: "\a0\25bc";
+				font-size: .5em;
+				color: rgba($black, 0.8);
+			}
+		}
 		/*
 		plan your menus and drop-downs wisely.
 		*/
 		ul.sub-menu,
 		ul.children {
 			margin-top: 0;
-			border: 1px solid #ccc;
+			border-bottom: 1px solid #ccc;
 			border-top: 0;
 			position: absolute;
 			visibility: hidden;
 			z-index: 8999;
 
 			li {
+				text-align: left;
 
 				a {
 					padding-left: 10px;
 					border-right: 0;
 					display: block;
 					width: 180px;
-					border-bottom: 1px solid #ccc;
+					border-bottom: 0px solid #ccc;
 
 					&:hover,
 					&:focus {}
