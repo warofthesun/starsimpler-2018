@@ -208,14 +208,17 @@ the navs on the site so our css is cleaner
 and more scalable.
 
 */
+
 #mobile-nav {
 	text-align: center;
 	margin-bottom: 1em;
-	margin-top:-2em;
+	margin-top:0em;
 	transition: all .5s;
+	order: 5;
+	z-index: 900;
 
 	&.show {
-		margin-top: 0em;
+		margin-top: 1em;
 		padding: .5em;
 		background-color: white;
 
@@ -240,7 +243,88 @@ and more scalable.
 
 }
 
+/*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+  min-width: 160px;
+  text-align: center;
+}
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+.select-selected {
+  background-color: $white;
+}
+/*style the arrow inside the select element:
+.select-selected:after {
+  position: absolute;
+  content: "\25bc";
+  top: 15px;
+  font-size: .5em;
+  right: 30px;
+  width: 0;
+  height: 0;
+}
+/*point the arrow upwards when the select box is open (active):
+.select-selected.select-arrow-active:after {
+  content: "\25b2";
+  top: 12px;
+  font-size: .8em;
+}
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: $black;
+  padding: 8px 16px;
+  border: 0px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.0) transparent;
+  cursor: pointer;
+}
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: $white;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
 
+
+.dropdown {
+
+
+
+	&--dropdowns {
+	order: 4;
+	justify-content: center;
+	margin-top: -1.5em;
+	z-index: 999;
+
+	select {
+		background-color: $white !important;
+	}
+
+	}
+
+	&--archive-dropdown {
+		padding: 0;
+		padding-left: 1em;
+		}
+
+	&--category {
+		.postform {
+		padding: 0;
+		padding-left: 1em;
+		}
+		}
+}
 
 .nav {
 	border-bottom: 0;
