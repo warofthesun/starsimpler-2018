@@ -5,13 +5,13 @@
 
 				<div id="inner-content" class="wrap cf row">
 
-						<main id="main" class="col-xs-12 col-sm-8 col-lg-9 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+						<main id="main" class="col-xs-12 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-								<header class="article-header">
+								<header class="article-header col-sm-8">
 
 									<h1 class="page-title" itemprop="headline"><?php the_title(); ?></h1>
 
@@ -27,7 +27,7 @@
 
 								</section> <?php // end article section ?>
 
-								<footer class="article-footer cf">
+								<footer class="article-footer cf col-sm-8">
 
 								</footer>
 
@@ -39,7 +39,7 @@
 
 						</main>
 
-						<?php get_sidebar(); ?>
+						<!--?php get_sidebar(); ?-->
 
 				</div>
 

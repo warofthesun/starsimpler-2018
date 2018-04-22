@@ -1393,11 +1393,11 @@ You can use this example if you want. Just replace all the variables
 and it will create a button dependant on those variables.
 */
 .blue-btn, .comment-reply-link, #submit {
-  background-color: #6b6d88; }
+  background-color: #000; }
   .blue-btn:hover, .comment-reply-link:hover, #submit:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus {
-    background-color: #62647d; }
+    background-color: black; }
   .blue-btn:active, .comment-reply-link:active, #submit:active {
-    background-color: #60627a; }
+    background-color: black; }
 
 /******************************************************************
 Site Name:
@@ -1442,7 +1442,7 @@ textarea,
   padding: 0 12px;
   margin-bottom: 14px;
   font-size: 1em;
-  color: #5c6b80;
+  color: #171d25;
   border-radius: 3px;
   vertical-align: middle;
   -webkit-box-shadow: none;
@@ -1714,7 +1714,7 @@ body {
   font-family: "Cutive Mono", Courier, monospace;
   font-size: 100%;
   line-height: 1.5;
-  color: #5c6b80;
+  color: #171d25;
   background-color: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -1790,12 +1790,12 @@ LAYOUT & GRID STYLES
 LINK STYLES
 *********************/
 a, a:visited {
-  color: #0919f5;
+  color: #000;
   /* on hover */
   /* on click */
   /* mobile tap color */ }
   a:hover, a:focus, a:visited:hover, a:visited:focus {
-    color: #0714c9; }
+    color: black; }
   a:link, a:visited:link {
     /*
 		this highlights links on iPhones/iPads.
@@ -1923,7 +1923,7 @@ and more scalable.
 		*/ }
     .nav li a {
       display: block;
-      color: #0919f5;
+      color: #000;
       text-decoration: none;
       padding: 0.75em;
       /*
@@ -1940,6 +1940,14 @@ and more scalable.
 /*********************
 POSTS & CONTENT STYLES
 *********************/
+.page--front-page .sticky::after {
+  content: "\25bc";
+  text-align: center;
+  display: block; }
+
+.page--front-page .sticky .byline, .page--front-page .sticky .article-footer {
+  display: none; }
+
 #content {
   margin-top: 1.5em; }
 
@@ -1950,10 +1958,12 @@ POSTS & CONTENT STYLES
   border: 0px solid #ccc; }
   .hentry header {
     border-bottom: 1px solid #f8f9fa;
-    padding: 1.5em; }
+    padding: 1.5em;
+    margin: 0 auto; }
   .hentry footer {
     padding: 1.5em;
-    border-top: 1px solid #f8f9fa; }
+    border-top: 1px solid #f8f9fa;
+    margin: 0 auto; }
     .hentry footer p {
       margin: 0; }
 
@@ -1963,8 +1973,12 @@ POSTS & CONTENT STYLES
 .entry-title {
   margin: 0; }
 
+.page-title {
+  font-size: 2em;
+  text-transform: lowercase; }
+
 .entry-title a {
-  color: #6b6d88; }
+  color: #000; }
 
 /* want to style individual post classes? Booya! */
 /* post by id (i.e. post-3) */
@@ -1991,7 +2005,11 @@ POSTS & CONTENT STYLES
 			but it's up to you. Feel free to change it up.
 			*/ }
   .entry-content p {
-    margin: 0 0 1.5em; }
+    margin: 0 auto;
+    margin-bottom: 1.5em;
+    -ms-flex-preferred-size: 66.66666667%;
+        flex-basis: 66.66666667%;
+    max-width: 66.66666667%; }
   .entry-content table {
     width: 100%;
     border: 1px solid #eaedf2;
@@ -2020,7 +2038,7 @@ POSTS & CONTENT STYLES
   .entry-content blockquote {
     margin: 0 0 1.5em 0.75em;
     padding: 0 0 0 0.75em;
-    border-left: 3px solid #6b6d88;
+    border-left: 3px solid #000;
     font-style: italic;
     color: #9fa6b4; }
   .entry-content dd {
@@ -2135,16 +2153,16 @@ PAGE NAVI STYLES
     padding: 0.75em;
     min-width: 1em;
     display: block;
-    color: #0919f5; }
+    color: #000; }
     .pagination a:hover, .pagination a:focus, .pagination span:hover, .pagination span:focus {
-      background-color: #0919f5;
+      background-color: #000;
       color: #fff; }
   .pagination .current {
     cursor: default;
-    color: #5c6b80; }
+    color: #171d25; }
     .pagination .current:hover, .pagination .current:focus {
       background-color: #fff;
-      color: #5c6b80; }
+      color: #171d25; }
 
 /* end .bones_page_navi */
 /* fallback previous & next links */
@@ -2256,7 +2274,7 @@ COMMENT FORM STYLES
   font-style: italic;
   margin: 0; }
   .logged-in-as a {
-    color: #5c6b80; }
+    color: #171d25; }
 
 .comment-form-comment {
   margin: 1.5em 0 0.75em; }
@@ -2436,7 +2454,8 @@ GENERAL STYLES
     -ms-flex-preferred-size: 66.66666667%;
         flex-basis: 66.66666667%;
     max-width: 66.66666667%;
-    margin: 0 auto; }
+    margin: 0 auto;
+    margin-bottom: 1.5em; }
   /*********************
 LAYOUT & GRID STYLES
 *********************/
@@ -2503,7 +2522,7 @@ NAVIGATION STYLES
 			has the possibility of being a mobile device.
 			*/ }
         .nav li a:hover, .nav li a:focus {
-          color: #0714c4;
+          color: black;
           text-decoration: underline; }
       .nav li ul.sub-menu,
       .nav li ul.children {

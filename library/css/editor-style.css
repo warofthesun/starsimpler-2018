@@ -349,7 +349,7 @@ probably best not to use it. I mean, were you going to anyway? */
   font-family: "IBM Plex Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 100%;
   line-height: 1.5;
-  color: #5c6b80;
+  color: #171d25;
   -webkit-font-smoothing: antialiased;
   /*********************
 	LINK STYLES
@@ -569,11 +569,11 @@ probably best not to use it. I mean, were you going to anyway? */
     -webkit-hyphenate-after: 3;
     hyphenate-lines: 3; }
   body#tinymce.wp-editor a, body#tinymce.wp-editor a:visited {
-    color: #0919f5;
+    color: #000;
     /* on hover */
     /* on click */ }
     body#tinymce.wp-editor a:hover, body#tinymce.wp-editor a:focus, body#tinymce.wp-editor a:visited:hover, body#tinymce.wp-editor a:visited:focus {
-      color: #0714c9; }
+      color: black; }
     body#tinymce.wp-editor a:link, body#tinymce.wp-editor a:visited:link {
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
   body#tinymce.wp-editor h1, body#tinymce.wp-editor .h1, body#tinymce.wp-editor h2, body#tinymce.wp-editor .h2, body#tinymce.wp-editor h3, body#tinymce.wp-editor .h3, body#tinymce.wp-editor h4, body#tinymce.wp-editor .h4, body#tinymce.wp-editor h5, body#tinymce.wp-editor .h5 {
@@ -628,7 +628,7 @@ probably best not to use it. I mean, were you going to anyway? */
   body#tinymce.wp-editor blockquote {
     margin: 0 0 1.5em 0.75em;
     padding: 0 0 0 0.75em;
-    border-left: 3px solid #6b6d88;
+    border-left: 3px solid #000;
     font-style: italic;
     color: #9fa6b4; }
   body#tinymce.wp-editor dd {
