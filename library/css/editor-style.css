@@ -640,6 +640,8 @@ probably best not to use it. I mean, were you going to anyway? */
     margin: 0 0 1.5em 0;
     max-width: 100%;
     height: auto; }
+    body#tinymce.wp-editor img.wp-more-tag {
+      height: 20px !important; }
   body#tinymce.wp-editor .size-auto,
   body#tinymce.wp-editor .size-full,
   body#tinymce.wp-editor .size-large,
