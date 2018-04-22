@@ -186,6 +186,7 @@ HEADER STYLES
 	#logo {
 		margin: 0.75em 0;
 		text-align: center;
+		border-bottom: 1px solid rgba(107, 109, 136, 0.07);
 
 		a {
 			color: $black;
@@ -261,7 +262,7 @@ and more scalable.
 
 		a {
 			display: block;
-			color: $pink;
+			color: $teal;
 			text-decoration: none;
 			padding: 0.75em;
 
@@ -364,7 +365,11 @@ POSTS & CONTENT STYLES
 
 		.page-title {}
 
-		.entry-title {}
+		.entry-title {
+			a {
+				color: $purple;
+			}
+		}
 
 		.archive-title {}
 
@@ -460,7 +465,7 @@ POSTS & CONTENT STYLES
 			blockquote {
 				margin: 0 0 1.5em 0.75em;
 				padding: 0 0 0 0.75em;
-				border-left: 3px solid $blue;
+				border-left: 3px solid $purple;
 				font-style: italic;
 				color: $meta-gray;
 
@@ -650,10 +655,10 @@ PAGE NAVI STYLES
       padding: 0.75em;
       min-width: 1em;
       display: block;
-      color: $blue;
+      color: $teal;
 
       &:hover, &:focus {
-      	background-color: $blue;
+      	background-color: $teal;
       	color: $white;
       }
     }

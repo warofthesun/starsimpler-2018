@@ -96,7 +96,7 @@ NAVIGATION STYLES
 			has the possibility of being a mobile device.
 			*/
 			&:hover, &:focus {
-				color: $white;
+				color: darken($link-color, 10%);
 				text-decoration: underline;
 			}
 		}

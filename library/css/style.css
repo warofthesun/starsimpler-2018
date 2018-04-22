@@ -1393,11 +1393,11 @@ You can use this example if you want. Just replace all the variables
 and it will create a button dependant on those variables.
 */
 .blue-btn, .comment-reply-link, #submit {
-  background-color: #2980b9; }
+  background-color: #6b6d88; }
   .blue-btn:hover, .comment-reply-link:hover, #submit:hover, .blue-btn:focus, .comment-reply-link:focus, #submit:focus {
-    background-color: #2574a8; }
+    background-color: #62647d; }
   .blue-btn:active, .comment-reply-link:active, #submit:active {
-    background-color: #2472a4; }
+    background-color: #60627a; }
 
 /******************************************************************
 Site Name:
@@ -1790,12 +1790,12 @@ LAYOUT & GRID STYLES
 LINK STYLES
 *********************/
 a, a:visited {
-  color: #f01d4f;
+  color: #0919f5;
   /* on hover */
   /* on click */
   /* mobile tap color */ }
   a:hover, a:focus, a:visited:hover, a:visited:focus {
-    color: #d10e3c; }
+    color: #0714c9; }
   a:link, a:visited:link {
     /*
 		this highlights links on iPhones/iPads.
@@ -1849,7 +1849,8 @@ HEADER STYLES
 
 #logo {
   margin: 0.75em 0;
-  text-align: center; }
+  text-align: center;
+  border-bottom: 1px solid rgba(107, 109, 136, 0.07); }
   #logo a {
     color: #000;
     font-family: "IBM Plex Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1922,7 +1923,7 @@ and more scalable.
 		*/ }
     .nav li a {
       display: block;
-      color: #f01d4f;
+      color: #0919f5;
       text-decoration: none;
       padding: 0.75em;
       /*
@@ -1961,6 +1962,9 @@ POSTS & CONTENT STYLES
 .page-title,
 .entry-title {
   margin: 0; }
+
+.entry-title a {
+  color: #6b6d88; }
 
 /* want to style individual post classes? Booya! */
 /* post by id (i.e. post-3) */
@@ -2016,7 +2020,7 @@ POSTS & CONTENT STYLES
   .entry-content blockquote {
     margin: 0 0 1.5em 0.75em;
     padding: 0 0 0 0.75em;
-    border-left: 3px solid #2980b9;
+    border-left: 3px solid #6b6d88;
     font-style: italic;
     color: #9fa6b4; }
   .entry-content dd {
@@ -2131,9 +2135,9 @@ PAGE NAVI STYLES
     padding: 0.75em;
     min-width: 1em;
     display: block;
-    color: #2980b9; }
+    color: #0919f5; }
     .pagination a:hover, .pagination a:focus, .pagination span:hover, .pagination span:focus {
-      background-color: #2980b9;
+      background-color: #0919f5;
       color: #fff; }
   .pagination .current {
     cursor: default;
@@ -2499,7 +2503,7 @@ NAVIGATION STYLES
 			has the possibility of being a mobile device.
 			*/ }
         .nav li a:hover, .nav li a:focus {
-          color: #fff;
+          color: #0714c4;
           text-decoration: underline; }
       .nav li ul.sub-menu,
       .nav li ul.children {
