@@ -48,9 +48,30 @@ LAYOUT & GRID STYLES
 HEADER STYLES
 *********************/
 
-.header {}
+.header {
+	#inner-header {
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
 
-	#logo {}
+
+		.navigation--menu-left {
+			order: 1;
+			justify-content: flex-start;
+			display: flex;
+		}
+
+		.navigation--menu-right {
+			order: 3;
+			justify-content: flex-end;
+			display: flex;
+		}
+	}
+}
+
+	#logo {
+		order: 2;
+	}
 
 /*********************
 NAVIGATION STYLES

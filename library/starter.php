@@ -191,7 +191,9 @@ function starter_theme_support() {
 	// registering wp3+ menus
 	register_nav_menus(
 		array(
-			'main-nav' => __( 'The Main Menu', 'startertheme' ),   // main nav in header
+			'left-nav' => __( 'Left Menu', 'startertheme' ),   // main nav in header
+			'right-nav' => __( 'Right Menu', 'startertheme' ),   // main nav in header
+			// 'main-nav' => __( 'The Main Menu', 'startertheme' ),   // main nav in header
 			'footer-links' => __( 'Footer Links', 'startertheme' ) // secondary nav in footer
 		)
 	);
