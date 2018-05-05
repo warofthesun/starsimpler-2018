@@ -229,11 +229,7 @@ function starter_comments( $comment, $args, $depth ) {
 
 
 /*
-This is a modification of a function found in the
-twentythirteen theme where we can declare some
-external fonts. If you're using Google Fonts, you
-can replace these fonts, change it in your scss files
-and be up and running in seconds.
+Theme Fonts
 */
 function starter_fonts() {
   wp_enqueue_style('googleFonts', '//fonts.googleapis.com/css?family=Cutive+Mono|IBM+Plex+Mono:300,400,700|IBM+Plex+Sans:300,400,500,700');
@@ -265,7 +261,33 @@ function scrollmagic_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'scrollmagic_scripts' );
 
+/* Remove 'Category & Month' from title on Archive page */
 
+add_filter( 'get_the_archive_title', function ($title) {
+
+    if ( is_category() ) {
+
+            $title = single_cat_title( '', false );
+
+        } elseif ( is_tag() ) {
+
+            $title = single_tag_title( '', false );
+
+        } elseif ( is_archive() ) {
+
+            $title = single_month_title( ' ', false );
+
+        } elseif ( is_author() ) {
+
+            $title = '<span class="vcard">' . get_the_author() . '</span>' ;
+
+        }
+
+
+
+    return $title;
+
+});
 
 /**
  * Register the required plugins for this theme.
@@ -283,16 +305,16 @@ function my_theme_register_required_plugins() {
 	$plugins = array(
 
 		// All-in-One Migration
-		 array(
-		 	'name'     				=> 'All-in-One WP Migration', // The plugin name
-		 	'slug'     				=> 'advanced-custom-fields', // The plugin slug (typically the folder name)
-		 	'source'   				=> 'https://downloads.wordpress.org/plugin/all-in-one-wp-migration.zip', // The plugin source
-		 	'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-		 	'version' 				=> '6.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-		 	'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
-		 	'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
-		 	'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
-		 ),
+		 // // array(
+		 // // 	'name'     				=> 'All-in-One WP Migration', // The plugin name
+		 // // 	'slug'     				=> 'advanced-custom-fields', // The plugin slug (typically the folder name)
+		 // // 	'source'   				=> 'https://downloads.wordpress.org/plugin/all-in-one-wp-migration.zip', // The plugin source
+		 // // 	'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
+		 // // 	'version' 				=> '6.0', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+		 // // 	'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
+		 // // 	'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
+		 // // 	'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
+		 // // ),
 
 
 		// Require ACF Pro
@@ -356,16 +378,16 @@ function my_theme_register_required_plugins() {
 		),
 
     // Google Analytics
-		array(
-			'name'     				=> 'Google Analytics Dashboard for WP', // The plugin name
-			'slug'     				=> 'google-analytics-dashboard-for-wp', // The plugin slug (typically the folder name)
-			'source'   				=> 'https://downloads.wordpress.org/plugin/google-analytics-dashboard-for-wp.zip', // The plugin source
-			'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
-			'version' 				=> '5.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
-			'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
-			'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
-			'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
-		),
+		// array(
+		// 	'name'     				=> 'Google Analytics Dashboard for WP', // The plugin name
+		// 	'slug'     				=> 'google-analytics-dashboard-for-wp', // The plugin slug (typically the folder name)
+		// 	'source'   				=> 'https://downloads.wordpress.org/plugin/google-analytics-dashboard-for-wp.zip', // The plugin source
+		// 	'required' 				=> false, // If false, the plugin is only 'recommended' instead of required
+		// 	'version' 				=> '5.1', // E.g. 1.0.0. If set, the active plugin must be this version or higher, otherwise a notice is presented
+		// 	'force_activation' 		=> false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
+		// 	'force_deactivation' 	=> false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
+		// 	'external_url' 			=> '', // If set, overrides default API URL and points to an external URL
+		// ),
 
     // Regenerate Thumbnails
 		array(
