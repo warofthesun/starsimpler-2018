@@ -50,7 +50,7 @@
 
 			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 
-				<div id="inner-header" class="wrap cf row">
+				<div id="inner-header" class="wrap row">
 
 					<p id="logo" class="h1 col-sm-4" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow">the st<span style="font-size:0.8em;margin:0 -2px;">&#x25b2;</span>r simpler</a></p>
 					<div class="dropdown--dropdowns row col-sm-12">
@@ -78,9 +78,9 @@
 					<nav role="navigation" class="navigation--menu-left col-sm-4" itemscope itemtype="http://schema.org/SiteNavigationElement">
 						<?php wp_nav_menu(array(
     					         'container' => false,                           // remove nav container
-    					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
+    					         'container_class' => 'menu',                 // class of container (should you choose to use it)
     					         'menu' => __( 'Left Menu', 'startertheme' ),  // nav name
-    					         'menu_class' => 'nav top-nav cf',               // adding custom nav class
+    					         'menu_class' => 'nav top-nav',               // adding custom nav class
     					         'theme_location' => 'left-nav',                 // where it's located in the theme
     					         'before' => '',                                 // before the menu
         			               'after' => '',                                  // after the menu
@@ -94,9 +94,9 @@
 					<nav role="navigation" class="navigation--menu-right col-sm-4" itemscope itemtype="http://schema.org/SiteNavigationElement">
 						<?php wp_nav_menu(array(
     					         'container' => false,                           // remove nav container
-    					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
+    					         'container_class' => 'menu',                 // class of container (should you choose to use it)
     					         'menu' => __( 'Right Menu', 'startertheme' ),  // nav name
-    					         'menu_class' => 'nav top-nav cf',               // adding custom nav class
+    					         'menu_class' => 'nav top-nav',               // adding custom nav class
     					         'theme_location' => 'right-nav',                 // where it's located in the theme
     					         'before' => '',                                 // before the menu
         			               'after' => '',                                  // after the menu

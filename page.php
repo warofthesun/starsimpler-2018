@@ -3,13 +3,13 @@
 
 			<div id="content">
 
-				<div id="inner-content" class="wrap cf row">
+				<div id="inner-content" class="wrap  row">
 
-						<main id="main" class="col-xs-12 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+						<main id="main" class="col-xs-12 " role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+							<article id="post-<?php the_ID(); ?>" <?php post_class( '' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
 								<header class="article-header col-sm-8">
 
@@ -21,13 +21,13 @@
 
 								</header> <?php // end article header ?>
 
-								<section class="entry-content cf" itemprop="articleBody">
+								<section class="entry-content " itemprop="articleBody">
 
 									<?php the_content(); ?>
 
 								</section> <?php // end article section ?>
 
-								<footer class="article-footer cf col-sm-8">
+								<footer class="article-footer  col-sm-8">
 
 								</footer>
 

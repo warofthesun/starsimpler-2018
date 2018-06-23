@@ -6,7 +6,7 @@
 				the_archive_title( '<h1 class="page-title"><span>', '</span></h1>' );
 				the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
-				<div id="inner-content" class="wrap cf row">
+				<div id="inner-content" class="wrap row">
 
 						<main id="main" class="col-xs-12 col-sm-8 col-lg-9 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
@@ -30,7 +30,7 @@
 
 								</header>
 
-								<section class="entry-content cf">
+								<section class="entry-content">
 
 									<?php the_post_thumbnail( 'starter-thumb-300' ); ?>
 

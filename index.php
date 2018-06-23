@@ -10,18 +10,18 @@
 
 
 
-				<div id="inner-content" class="wrap cf row">
+				<div id="inner-content" class="wrap  row">
 
 					<?php
 					if ( is_front_page() ) {
-						echo '<main id="main" class="col-xs-12 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">';
+						echo '<main id="main" class="col-xs-12 " role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">';
 					} else {
-						echo '<div id="<main id="main" class="col-xs-12 col-sm-8 col-lg-9 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">';
+						echo '<div id="<main id="main" class="col-xs-12 col-sm-8 col-lg-9 " role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">';
 					}
 					?>
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf single-post' ); ?> role="article">
+							<article id="post-<?php the_ID(); ?>" <?php post_class( ' single-post' ); ?> role="article">
 
 								<?php
 								if ( is_front_page() ) {
@@ -42,7 +42,7 @@
 
 								</header>
 
-								<section class="entry-content cf">
+								<section class="entry-content ">
 									<?php the_content(); ?>
 								</section>
 
@@ -73,7 +73,7 @@
 
 							<?php else : ?>
 
-									<article id="post-not-found" class="hentry cf">
+									<article id="post-not-found" class="hentry ">
 											<header class="article-header">
 												<h1><?php _e( 'Oops, Post Not Found!', 'startertheme' ); ?></h1>
 										</header>
